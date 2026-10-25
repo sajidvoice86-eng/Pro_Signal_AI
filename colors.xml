@@ -1,0 +1,9 @@
+<resources>
+    <color name="bg_dark">#0B0F19</color>
+    <color name="bg_surface">#121724</color>
+    <color name="cyan_accent">#00E5FF</color>
+    <color name="emerald_buy">#00E676</color>
+    <color name="rose_sell">#FF3355</color>
+    <color name="slate_neutral">#64748B</color>
+    <color name="white">#FFFFFF</color>
+</resources>

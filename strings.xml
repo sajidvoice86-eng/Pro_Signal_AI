@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PRO SIGNAL AI</string>
+    <string name="btn_grant_overlay">Grant Overlay Permission</string>
+    <string name="btn_start_scanner">START FLOATING SCANNER</string>
+    <string name="btn_stop_scanner">STOP SCANNER</string>
+    <string name="notification_title">PRO SIGNAL AI Active</string>
+    <string name="notification_desc">Floating Scanner bubble is running above Quotex</string>
+    <string name="scan_current_chart">SCAN CURRENT CHART</string>
+    <string name="rescan_chart">RESCAN</string>
+</resources>
