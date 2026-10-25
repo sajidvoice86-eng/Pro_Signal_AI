@@ -1,0 +1,38 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get source code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Build APK
+        run: |
+          if [ -f gradlew ]; then
+            chmod +x gradlew
+            ./gradlew assembleDebug
+          elif [ -f gradlew.bat ]; then
+            echo "Android build files are incomplete"
+            exit 1
+          else
+            echo "Gradle wrapper not found. Android project may be incomplete."
+            exit 1
+          fi
+
+      - name: Save APK
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: Pro-Signal-AI-APK
+          path: '**/build/outputs/apk/debug/*.apk'
